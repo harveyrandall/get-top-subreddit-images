@@ -11,7 +11,7 @@ secretkey=""
 subredditname="pics"
 
 ##### Get oauth token
-oauth=$(curl -X POST --user-agent "fetchSubredditImages:v0.1 (by /u/unrestive)" -d "grant_type=password&username=${username}&password=${password}" --user "${publickey}:${secretkey}" https://www.reddit.com/api/v1/access_token)
+oauth=$(curl -X POST --user-agent "fetchSubredditImages:v0.1 (by )" -d "grant_type=password&username=${username}&password=${password}" --user "${publickey}:${secretkey}" https://www.reddit.com/api/v1/access_token)
 accToken=$(echo $oauth | grep -oEi '[^"]{36}')
 echo $oauth
 
